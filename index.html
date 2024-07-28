@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+
+    
+
+    <div class="container">
+        <nav class="sidebar">
+            <div class="logo">
+                <img src="path/to/spotify-logo.png" alt="Spotify">
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#" class="active"><span class="material-icons">home</span>Home</a></li>
+                <li><a href="#"><span class="material-icons">search</span>Search</a></li>
+            </ul>
+            <div class="library">
+                <h2>Your Library</h2>
+                <ul>
+                    <li><a href="#">Playlists</a></li>
+                    <li><a href="#">Albums</a></li>
+                    <li><a href="#">Artists</a></li>
+                </ul>
+            </div>
+            <div class="playlists">
+                <a href="#" class="playlist">
+                    <img src="path/to/liked-songs.jpg" alt="Liked Songs">
+                    Liked Songs
+                </a>
+                <a href="#" class="playlist">
+                    <img src="path/to/dark-playlist.jpg" alt="Dark">
+                    Dark
+                </a>
+                <a href="#" class="playlist">
+                    <img src="path/to/gym-playlist.jpg" alt="Gym">
+                    Gym
+                </a>
+                <a href="#" class="playlist">
+                    <img src="path/to/chill-playlist.jpg" alt="Chill">
+                    Chill
+                </a>
+            </div>
+        </nav>
+        <main class="main-content"  id="mainContent">
+            <header class="top-bar">
+                <div class="navigation-buttons">
+                    <button class="nav-btn"><span class="material-icons">arrow_back</span></button>
+                    <button class="nav-btn"><span class="material-icons">arrow_forward</span></button>
+                </div>
+                <div class="user-menu">
+                    <button class="explore-premium">Explore Premium</button>
+                    <button class="user-btn"><span class="material-icons">person</span></button>
+                </div>
+            </header>
+            <section class="content">
+                <h1>Liked Songs</h1>
+                <div class="playlist-grid">
+                    <div class="playlist-item" data-playlist="liked-songs">
+                        <img src="liked-songs-cover.jpg" alt="Liked Songs">
+                        <h3>Liked Songs</h3>
+                    </div>
+                    <div class="playlist-item" data-playlist="dark">
+                        <img src="dark-cover.jpg" alt="Dark">
+                        <h3>Dark</h3>
+                    </div>
+                    <div class="playlist-item" data-playlist="2093">
+                        <img src="2093-cover.jpg" alt="2093 (P2)">
+                        <h3>2093 (P2)</h3>
+                    </div>
+                    <div class="playlist-item" data-playlist="togi">
+                        <img src="path/to/togi-cover.jpg" alt="TOGI">
+                        <h3>TOGI</h3>
+                    </div>
+                </div>
+                <h2>Made For Abhay Sharma</h2>
+                <div class="playlist-grid">
+                    <div class="playlist-item" data-playlist="liked-songs">
+                        <img src="path/to/discover-weekly-cover.jpg" alt="Discover Weekly">
+                        <h3>Discover Weekly</h3>
+                        <p>Your weekly mixtape of fresh music</p>
+                    </div>
+                    <div class="playlist-item" data-playlist="daily-mix-1">
+                        <img src="path/to/daily-mix-1-cover.jpg" alt="Daily Mix 1">
+                        <h3>Daily Mix 1</h3>
+                        <p>Travis Scott, Drake, Metro Boomin and more</p>
+                    </div>
+                    <div class="playlist-item" data-playlist="daily-mix-2">
+                        <img src="path/to/daily-mix-2-cover.jpg" alt="Daily Mix 2">
+                        <h3>Daily Mix 2</h3>
+                        <p>chipbagov, YOUTHISENDING, and more</p>
+                    </div>
+                    <div class="playlist-item" data-playlist="daily-mix-3">
+                        <img src="path/to/daily-mix-3-cover.jpg" alt="Daily Mix 3">
+                        <h3>Daily Mix 3</h3>
+                        <p>Anar, NECROLX, NUEKI and more</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <footer class="now-playing">
+        <div class="track-info">
+            <img id="currentTrackArt" src="path/to/dune-cover.jpg" alt="Album Art">
+            <div>
+                <h4 id="currentTrackName">Armada</h4>
+                <p id="currentArtistName">Hans Zimmer</p>
+            </div>
+        </div>
+        <div class="player-controls">
+            <button id="prevBtn"><span class="material-icons">skip_previous</span></button>
+            <button id="playPauseBtn"><span class="material-icons">play_arrow</span></button>
+            <button id="nextBtn"><span class="material-icons">skip_next</span></button>
+        </div>
+        <div class="progress-container">
+            <span id="currentTime">0:00</span>
+            <div class="progress-bar">
+                <div id="progress"></div>
+            </div>
+            <span id="totalTime">5:09</span>
+        </div>
+    </footer>
+    <audio id="audioPlayer"></audio>
+
+    <div id="likedSongsPage" class="liked-songs-page" style="display:none;">
+        <div class="playlist-header">
+            <img src="https://via.placeholder.com/232" alt="Liked Songs">
+            <div class="playlist-info">
+                <h6>Playlist</h6>
+                <h1>Liked Songs</h1>
+                <p>Abhay Sharma • 107 songs</p>
+            </div>
+        </div>
+        <div class="playlist-controls">
+            <button class="play-button"><span class="material-icons">play_arrow</span></button>
+            <button class="shuffle-button"><span class="material-icons">shuffle</span></button>
+            <button class="download-button"><span class="material-icons">download</span></button>
+        </div>
+        <div class="playlist-table">
+            <div class="table-header">
+                <span>#</span>
+                <span>Title</span>
+                <span>Album</span>
+                <span>Date added</span>
+                <span><span class="material-icons">schedule</span></span>
+            </div>
+            <div id="likedSongsList"></div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
